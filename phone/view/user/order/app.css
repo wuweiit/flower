@@ -1,0 +1,38 @@
+ .user-header{
+     height: 140px;
+     background: rebeccapurple;
+
+ }
+ .user-order-list{
+
+ }
+
+
+ .user-order-list .order-menu{
+     height: 30px;
+     line-height: 30px;
+     font-size: 13px;
+     color: #666666;
+ }
+
+ .user-order-list .order-menu .o-store{
+     margin-left: 8px;
+
+}
+ .user-order-list .order-menu .o-operate{
+     display: inline-block;
+     float: right;
+     margin-right: 8px;
+ }
+
+ .user-order-list .order-menu .o-delete{
+     font-size: 14px;
+ }
+
+ .user-order-list .order-info{
+     height: 30px;
+     line-height: 30px;
+     text-align: right;
+     font-size: 13px;
+     margin-right: 8px;
+ }

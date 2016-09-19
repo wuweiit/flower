@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+	<title>App</title>
+    <meta charset="utf-8" />
+	<meta name="keywords" content="webapp">
+	<meta name="description" content="webapp">
+	<meta name="author" content="marker">
+	<meta name="content-type" content="text/html; charset=UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no"/>
+
+	<link rel="stylesheet" href="lib/font-awesome4/css/font-awesome.min.css" type="text/css" />
+	<link rel="stylesheet" href="lib/jquerymobile/jquery.mobile-1.4.5.css" type="text/css" />
+    <link rel="stylesheet" href="lib/jquerymobile/jquery.mobile.theme-1.4.5.css" type="text/css" />
+    <link rel="stylesheet" href="lib/jquery/plugins/flickity/css/flickity.css">
+
+    <link rel="stylesheet" type="text/css" href="css/mobile.css"/>
+
+</head>
+
+<body ng-cloak ng-controller="indexController">
+    <div class="my-page" data-role="page" class="ui-page-header-fixed ui-page-footer-fixed">
+        <ng-view></ng-view>
+
+
+        <div class="footerbars" data-role="footer" data-position="fixed" data-tap-toggle="false">
+            <div data-role="navbar" data-iconpos="top" data-grid="c">
+                <ul>
+                    <li><span
+                            class="ui-li-count">XXXX</span><a href="#/index.html" data-icon="home">首页</a></li>
+                    <li><a href="#/category.html" data-icon="grid">分类</a></li>
+                    <li><a href="#/shopcar.html" data-icon="shop">购物车</a></li>
+                    <li><a href="#/user.html" data-icon="user">我的</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+	<script type="text/javascript">
+		var lang = 'zh-cn';
+	</script>
+	 <!--<script type="text/javascript" src="js/appcan.js"></script>-->
+
+	 <script type="text/javascript"
+			src="https://api.map.baidu.com/api?v=2.0&ak=9zhlS41F6mtH7IvDQN5K6WcoHS36Ay9j&s=1"></script>
+	<script src="lib/require/require.js" data-main="js/main.js" mode="mobile" type="text/javascript"></script>
+
+
+
+
+
+
+</body>
+</html>
