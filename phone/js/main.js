@@ -14,10 +14,10 @@ var options = {
     paths: {//配置加载路径
           'jquery': 'lib/jquery/jquery-1.10.2.min'
         , 'bootstrap': 'lib/bootstrap3/js/bootstrap.min'
-        , 'angular': 'lib/angular/angular.min' // requirejs的一个文本插件
+        , 'angular': 'lib/angular-1.2.30/angular' // requirejs的一个文本插件
         , 'x18n': 'lib/x18n/x18n'
-        , 'angular-animate': 'lib/angular/angular-animate.min'
-        , 'angular-route': 'lib/angular/angular-route.min'
+        , 'angular-animate': 'lib/angular-1.2.30/angular-animate'
+        , 'angular-route': 'lib/angular-1.2.30/angular-route'
         , 'angularAMD': 'lib/angular/angularAMD.min'
         , 'webchat': 'lib/faceinner/websocket'
         , 'umeditor': 'lib/umeditor/umeditor'	        	
@@ -112,23 +112,43 @@ require.config(options);
 require([
         'angular'
       , 'angularAMD'
+      , 'jquery'
       , 'app'
       , 'moudleRouter'
       , 'moudleController'
       , 'loading'
       , 'jquerymobile'
       
-    ], function(angular, angularAMD, app, loading) {
+    ], function(angular, angularAMD,$, app, loading) {
 	console.log('ready bootstrap angular');
 
-    //$.mobile.loading( "show", {
+    // $.mobile.loading( "show", {
     //    text: "启动中...",
     //    textVisible: true,
     //    theme: "a",
     //    textonly: false,
     //    html: "..."
-    //});
+    // });
 
+    console.log("Jquery Mobile init...")
+    $.mobile.page.prototype.options.domCache = false;// 关闭缓存
+    $.mobile.initializePage = false;
+    $.mobile.defaultPageTransition = "fade";
+    $.mobile.autoInitializePage = false;
+    $.mobile.hideUrlBar = false;
+    $.mobile.linkBindingEnabled = false;
+    $.mobile.hashListeningEnabled = false;
+    $.mobile.ajaxEnabled = false;
+    $.support.boxShadow = false;
+    console.log( $.support);
+    // $( document ).on( "mobileinit", function() {
+    //
+    //
+    //
+    // });
+
+
+    // 启动angularjs
 	angularAMD.bootstrap(app);
 	     
 	
@@ -156,3 +176,4 @@ function getViewMode(){
     }
     return "pc";// 默认显示电脑版本
 }
+

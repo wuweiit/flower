@@ -23,17 +23,7 @@ define([
 
 
 
-	$( document ).on( "mobileinit", function() {
-		$.mobile.page.prototype.options.domCache = false;// 关闭缓存
-		$.mobile.initializePage = false;
-		$.mobile.defaultPageTransition = "fade";
-		$.mobile.autoInitializePage = true;
-		$.mobile.hideUrlBar = false;
-		$.mobile.linkBindingEnabled = false;
-		$.mobile.hashListeningEnabled = false;
-		$.mobile.ajaxEnabled = false;
 
-	});
 	
 	
 	return angular.module('faceinner', [

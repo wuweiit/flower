@@ -9,8 +9,11 @@ define(['app','flickity','css!./app.css'], function (app, Flickity) {//加载依
     
 	return ["$scope", function ($scope) {
 
-
-		$(":jqmData(role='header')").toolbar({ });
+		$(":jqmData(role='page')").page({  });
+		$(":jqmData(role='header')").toolbar({
+			    position: "fixed",
+			tapToggle: false
+	});
 		$(":jqmData(role='footer')").toolbar({ });
 
 

@@ -18,32 +18,12 @@
 
 </head>
 
-<body ng-cloak ng-controller="indexController">
-    <div class="my-page" data-role="page" class="ui-page-header-fixed ui-page-footer-fixed">
-        <ng-view></ng-view>
+<body ng-cloak ng-controller="indexController" ng-view>
 
 
-        <div class="footerbars" data-role="footer" data-position="fixed" data-tap-toggle="false">
-            <div data-role="navbar" data-iconpos="top" data-grid="c">
-                <ul>
-                    <li><span
-                            class="ui-li-count">XXXX</span><a href="#/index.html" data-icon="home">首页</a></li>
-                    <li><a href="#/category.html" data-icon="grid">分类</a></li>
-                    <li><a href="#/shopcar.html" data-icon="shop">购物车</a></li>
-                    <li><a href="#/user.html" data-icon="user">我的</a></li>
-                </ul>
-            </div>
-        </div>
-    </div>
 
-	<script type="text/javascript">
-		var lang = 'zh-cn';
-	</script>
-	 <!--<script type="text/javascript" src="js/appcan.js"></script>-->
 
-	 <script type="text/javascript"
-			src="https://api.map.baidu.com/api?v=2.0&ak=9zhlS41F6mtH7IvDQN5K6WcoHS36Ay9j&s=1"></script>
-	<script src="lib/require/require.js" data-main="js/main.js" mode="mobile" type="text/javascript"></script>
+
 
 
 
@@ -51,4 +31,13 @@
 
 
 </body>
+
+<script type="text/javascript">
+    var lang = 'zh-cn';
+</script>
+
+<!--<script type="text/javascript" src="js/appcan.js"></script>-->
+<script src="lib/require/require.js" data-main="js/main.js" mode="mobile" type="text/javascript"></script>
+
+
 </html>

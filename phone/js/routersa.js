@@ -171,53 +171,42 @@ app.config(['$routeProvider','$locationProvider', function($routeProvider, $loca
 
 
 
-	// 重写地址支持
-    //$locationProvider.html5Mode(true).hashPrefix('/');
-    
-    
- 
+	// 重写地址支持s
+     $locationProvider.html5Mode(true); //.hashPrefix('!#');
+
+    /**
+     * 实现AMD规范异步加载数据
+     */
+    function router(config){
+        // 生成独立URL，保证不缓存页面数据
+        var random = "?t="+Math.random();
+        config.templateUrl = config.templateUrl + random;
+        return angularAMD.route(config);
+    }
+
+
+}]).run(['$rootScope', function($rootScope) {
+
+
+   $rootScope.$on('$routeChangeStart', function(evt, next, current) {
+       // 如果用户未登录
+    // 	var control = next.$$route.controller;// 控制器名称
+
+
+       console.log(evt)
+       console.log(next)
+       console.log(current)
+
+
+
+   });
+
+		$rootScope.$on('$routeChangeSuccess', function(evt, next, current) {
+			// 数据reload
+			console.log(current);
+		});
+
 }]);
-
-
-
-
-/**
- * 实现AMD规范异步加载数据
- */
-function router(config){
-	// 生成独立URL，保证不缓存页面数据
-	var random = "?t="+Math.random();
-	config.templateUrl = config.templateUrl + random;
-	return angularAMD.route(config);
-}
-
-
-//.run(['$rootScope', function($rootScope) {
-//	
-//	
-//    $rootScope.$on('$routeChangeStart', function(evt, next, current) {
-//        // 如果用户未登录
-//    	var control = next.$$route.controller;// 控制器名称
-//    	
-//        // alert(JSON.stringify(next.$$route.controller));
-//        
-////        console.log(control);
-////        if(control  == 'RegisterController'){
-////        	
-////        
-////	        require([control],function(c){  
-////				
-////				console.log(c); 
-////			}); 
-////        }
-//		
-//        
-//        
-//    });
-//    
-//    
-//    
-//}]);
 
  
 

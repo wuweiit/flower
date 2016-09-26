@@ -1,25 +1,139 @@
 
-<div data-role="header" data-position="fixed" data-tap-toggle="false">
-    <h1>花分享</h1>
-</div>
+<div data-role="page" class="ui-page-active">
+    <div data-role="tabs" id="tabs">
+        <div data-role="footer" data-position="fixed" data-tap-toggle="false">
+            <div data-role="navbar" data-iconpos="top" data-grid="c" data-shadow="false">
+                <ul>
+                    <li><a href="#nav_home" data-icon="home" >首页<span class="ui-li-count">1</span></a></li>
+                    <li><a href="#nav_cate" data-icon="grid" data-transition="slide">分类</a></li>
+                    <li><a href="#nav_shop" data-icon="shop" data-transition="slide">购物车</a></li>
+                    <li><a href="#nav_user" data-icon="user" data-transition="slide">我的</a></li>
+                </ul>
+            </div>
+        </div>
 
 
-<div id="main-gallery" class="carousel">
-    <div class="carousel-cell"><img src="images/ad/elec-ad1.png" /></div>
-    <div class="carousel-cell"><img src="images/ad/elec-ad1.png" /></div>
-    <div class="carousel-cell"><img src="images/ad/elec-ad1.png" /></div>
-</div>
+
+        <div id="nav_home">
+            <div data-role="header" data-position="fixed" data-tap-toggle="false">
+                <h1>花分享</h1>
+            </div>
+            <div id="main-gallery" class="carousel">
+                <div class="carousel-cell"><img src="images/ad/elec-ad1.png"/></div>
+                <div class="carousel-cell"><img src="images/ad/elec-ad1.png"/></div>
+                <div class="carousel-cell"><img src="images/ad/elec-ad1.png"/></div>
+            </div>
+            HOME
+        </div>
 
 
 
-<div role="main" class="ui-content">
-    <div style="margin-top: 20px;">
+        <div id="nav_cate">
+            <div data-role="header" data-position="fixed" data-tap-toggle="false">
+                <h1>分类</h1>
+            </div>
+            <div id="category-list">
+                <ul data-role="listview" data-inset="true"><li><a href="#">
+                    <img src="images/demo/album-hc.jpg">
+                        <h2>Broken Bells</h2><p>Broken Bells</p></a></li>
+                    <li><a href="#">
+                        <img src="images/demo/album-hc.jpg">
+                            <h2>Warning</h2><p>Hot Chip</p></a></li>
+                    <li><a href="#">
+                        <img src="images/demo/album-hc.jpg">
+                            <h2>Wolfgang Amadeus Phoenix</h2><p>Phoenix</p></a></li>
+                    <li><a href="#">
+                        <img src="images/demo/album-hc.jpg">
+                            <h2>Wolfgang Amadeus Phoenix</h2><p>Phoenix</p></a></li>
+                    <li><a href="#">
+                        <img src="images/demo/album-hc.jpg">
+                            <h2>Wolfgang Amadeus Phoenix</h2><p>Phoenix</p></a></li>
+                    <li><a href="#">
+                        <img src="images/demo/album-hc.jpg">
+                            <h2>Wolfgang Amadeus Phoenix</h2><p>Phoenix</p></a></li>
+                    <li><a href="#">
+                        <img src="images/demo/album-hc.jpg">
+                            <h2>Wolfgang Amadeus Phoenix</h2><p>Phoenix</p></a></li>
+                    <li><a href="#">
+                        <img src="images/demo/album-hc.jpg">
+                            <h2>Wolfgang Amadeus Phoenix</h2><p>Phoenix</p></a></li>
+                    <li><a href="#">
+                        <img src="images/demo/album-hc.jpg">
+                            <h2>Wolfgang Amadeus Phoenix</h2><p>Phoenix</p></a></li>
+                </ul>
+            </div>
 
-    HOME
 
 
+        </div>
+
+
+
+        <div id="nav_shop">
+            <div data-role="header" data-position="fixed" data-tap-toggle="false">
+                <h1>分类</h1>
+            </div>
+        </div>
+        <div id="nav_user">
+            <div data-role="header" data-position="fixed"  data-tap-toggle="false">
+                <h1 class="ui-title">我的账户</h1>
+            </div><!-- /header -->
+
+            <div class="user-header" ng-click="gotoUserInfo()">
+                <div class="user-icon">
+                    <img src="images/demo/album-hc.jpg" />
+                </div>
+                <div class="user-name">
+                    <span>wuweiit</span>
+                </div>
+
+
+            </div>
+            <div class="user-order">
+                <div class="ui-grid-d">
+                    <div class="ui-block-a">
+                        <a class="user-order-item">
+                            <label>待付款</label>
+                            <span>1</span>
+                        </a>
+                    </div>
+                    <div class="ui-block-b">
+                        <a class="user-order-item">
+                            <label>待发货</label>
+                            <span>0</span>
+                        </a>
+                    </div>
+                    <div class="ui-block-c">
+                        <a class="user-order-item">
+                            <label>待收货</label>
+                            <span>0</span>
+                        </a>
+                    </div>
+                    <div class="ui-block-d">
+                        <a class="user-order-item">
+                            <label>待评价</label>
+                            <span>0</span>
+                        </a>
+                    </div>
+
+                    <div class="ui-block-d">
+                        <a class="user-order-item">
+                            <label>退款</label>
+                            <span>1</span>
+                        </a>
+                    </div>
+                </div><!-- /grid-b -->
+
+            </div>
+            <div class="user-menus">
+                <ul data-role="listview" data-icon="carat-r">
+                    <li><a href="#/user/order/1.html">我的订单</a></li>
+                    <li><a href="#">优惠券</a></li>
+                    <li><a href="#">我的收藏</a></li>
+                    <li><a href="#">账号绑定</a></li>
+                    <li><a href="#">我的积分</a></li>
+                </ul>
+            </div>
+        </div>
     </div>
-
 </div>
-
-

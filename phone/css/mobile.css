@@ -4,6 +4,14 @@ body{
 .ui-title{
     font-size: 1em;
 }
+
+.ui-btn:focus{
+    box-shadow: none !important;
+}
+.ui-tabs{
+    padding: 0;
+}
+
 .content{
     margin-top: 1em;
 }

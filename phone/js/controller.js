@@ -87,7 +87,6 @@ define([
         function ($rootScope, $scope, $location, $utils) {
  		var $menuCanvas = $('.am-offcanvas');
 
-            console.log($scope);
 
         /**
          *
